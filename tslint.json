@@ -1,0 +1,75 @@
+{
+  "lintOptions": {
+    "typeCheck": true
+  },
+  "rulesDirectory": [
+    "node_modules/tslint-eslint-rules/dist/rules"
+  ],
+  "extends": ["tslint:recommended", "tslint-plugin-prettier", "tslint-eslint-rules", "tslint-config-prettier"],
+  "rules": {
+    "quotemark": [false, "single", "avoid-escape", "avoid-template"],
+    "no-constant-condition": true,
+    "prefer-const": false,
+    "prettier": [true, ".prettierrc"],
+    "object-literal-sort-keys": false,
+    "semicolon": [false, "never"],
+    
+    "no-unnecessary-initializer": false,
+    "no-shadowed-variable": false,
+    "no-empty": false,
+    "no-duplicate-super": false,
+
+    "ordered-imports": false,
+    "cyclomatic-complexity": false,
+    "increment-decrement": false,
+    "newline-before-return": false,
+    "no-parameter-properties": false,
+    "no-parameter-reassignment": false,
+    "comment-format": [
+        true,
+        "check-space"
+    ],
+    "member-access": true,
+    "only-arrow-functions": [
+        true,
+        "allow-declarations",
+        "allow-named-functions"
+    ],
+    "completed-docs": false,
+    "no-any": false,
+    "no-magic-numbers": false,
+    "no-non-null-assertion": false,
+    "no-null-keyword": false,
+    "no-require-imports": false,
+    "no-unbound-method": false,
+    "no-unnecessary-qualifier": false,
+    "no-use-before-declare": false,
+    "no-void-expression": false,
+    "prefer-function-over-method": false,
+    "strict-type-predicates": false,
+    "triple-equals": [true, "allow-undefined-check"],
+    "typedef": false,
+
+    "ban": [true,
+      ["describe", "only"],
+      ["it", "only"]
+    ],
+
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "member-ordering": [false],
+    "newline-per-chained-call": false,
+    "no-console": [false],
+    "no-switch-case-fall-through": true,
+    "strict-boolean-expressions": [true, "allow-boolean-or-undefined"],
+    "switch-default": false,
+    "variable-name": [true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "linebreak-style": false
+  }
+
+}
