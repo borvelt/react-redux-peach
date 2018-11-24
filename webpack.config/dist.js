@@ -11,9 +11,10 @@ module.exports = {
     publicPath: '/',
     library: 'reactReduxPeach',
     globalObject: 'this',
+    umdNamedDefine: true,
     libraryTarget: 'umd',
   },
-  externals: [],
+  externals: ['react', 'react-dom', 'redux'],
   module: {
     rules: [
       {
@@ -21,7 +22,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          presets: ['@babel/preset-env'],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: [
             '@babel/plugin-transform-runtime',
             '@babel/plugin-syntax-dynamic-import',
