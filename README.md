@@ -83,7 +83,7 @@ useIncrement should be like this:
 import {useDispatch, useStateMapper} from 'react-redux-peach'
 function useIncrement() {
   // incrementAction: you have defined it before.
-  const increment = useDispatch(incrementAction, useContext)
+  const increment = useDispatch(incrementAction)
   let counter
   counter = useStateMapper(incrementAction, 'counter')
   // OR
