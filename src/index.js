@@ -7,7 +7,7 @@ import {
   useCallback,
 } from 'react'
 import shallowEqual from './shallow-equal'
-import { Action, State, rootReducer } from 'redux-peach'
+import { Store, Action, State, rootReducer } from 'redux-peach'
 import { mapStringToObject, removeExtraDots } from 'object-maker'
 
 const StoreContext = createContext(null)
@@ -78,6 +78,6 @@ export function useInitialState(initialState) {
   return initialState
 }
 
-export { Action, rootReducer }
+export { Store, Action, rootReducer }
 
 export default StoreContext

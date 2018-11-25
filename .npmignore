@@ -13,3 +13,5 @@ npm-debug.log
 web/
 setup/
 .setup/
+.idea/
+webpack.config

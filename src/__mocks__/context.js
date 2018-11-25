@@ -1,10 +1,8 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import { rootReducer } from 'react-redux-peach'
+import { rootReducer } from 'redux-peach'
 import { createLogger } from 'redux-logger'
 import { createContext } from 'react'
-
-const context = jest.genMockFromModule('context')
 
 const store = createStore(
   rootReducer({}),
@@ -18,6 +16,6 @@ const store = createStore(
   ),
 )
 
-context.store = createContext(store)
+const StoreContext = createContext(store)
 
-export default context
+export default StoreContext
