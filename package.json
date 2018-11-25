@@ -7,7 +7,7 @@
   },
   "license": "ISC",
   "repository": "https://github.com/borvelt/react-redux-peach",
-  "description": "Make wep apps easier with react hook and redux",
+  "description": "Make and develop web apps easier with react hooks and redux",
   "main": "dist/index.js",
   "module": "src/index.js",
   "scripts": {
