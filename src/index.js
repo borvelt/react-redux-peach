@@ -16,23 +16,20 @@ export const Provider = StoreContext.Provider
 
 export function useMapper(mapperExpression, name = '') {
   const { getState } = useContext(StoreContext)
-  return useCallback(
-    () => {
-      if (mapperExpression instanceof Action) {
-        return mapStringToObject(
-          removeExtraDots([mapperExpression.getScope(), name].join('.')),
-          getState(),
-        )
-      }
-      if (mapperExpression instanceof Function) {
-        return mapperExpression(getState())
-      }
-      if (typeof mapperExpression === typeof '') {
-        return mapStringToObject(mapperExpression, getState())
-      }
-    },
-    [mapperExpression],
-  )
+  return useCallback(() => {
+    if (mapperExpression instanceof Action) {
+      return mapStringToObject(
+        removeExtraDots([mapperExpression.getScope(), name].join('.')),
+        getState(),
+      )
+    }
+    if (mapperExpression instanceof Function) {
+      return mapperExpression(getState())
+    }
+    if (typeof mapperExpression === typeof '') {
+      return mapStringToObject(mapperExpression, getState())
+    }
+  }, [mapperExpression])
 }
 
 export function useStateMapper(mapperExpression, name) {
@@ -51,13 +48,10 @@ export function useStateMapper(mapperExpression, name) {
 
 export function useAction(action) {
   const store = useContext(StoreContext)
-  return useMemo(
-    () => {
-      action.hookToStore(store)
-      return action.make()
-    },
-    [action],
-  )
+  return useMemo(() => {
+    action.hookToStore(store)
+    return action.make()
+  }, [action])
 }
 
 export function useDispatch(action) {
