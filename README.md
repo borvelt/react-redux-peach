@@ -6,7 +6,7 @@ _Make and develop web apps easier with react hooks and redux_
 _Hooks make react apps more scalable and more effective_
 ## Installation
 ```bash
-$ npm install --save reac-redux-peach
+$ npm install --save react-redux-peach
 
 # So you need react, react-dom and redux
 $ npm install --save react@next react-dom@next redux
@@ -83,7 +83,7 @@ useIncrement should be like this:
 import {useDispatch, useStateMapper} from 'react-redux-peach'
 function useIncrement() {
   // incrementAction: you have defined it before.
-  const increment = useDispatch(incrementAction, useContext)
+  const increment = useDispatch(incrementAction)
   let counter
   counter = useStateMapper(incrementAction, 'counter')
   // OR
