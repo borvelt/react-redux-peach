@@ -19,8 +19,6 @@
     "prettify:check": "tslint-config-prettier-check ./tslint.json",
     "lint": "npm run prettify:js && npm run prettify:ts",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "dev": "webpack-dev-server --open --config webpack.config/dev.js",
-    "web": "npm run clean:web && npm run lint && webpack --config webpack.config/web.js",
     "dist": "npm run clean:dist && npm run lint && webpack --config webpack.config/dist.js",
     "test": "jest --no-cache"
   },
@@ -57,12 +55,9 @@
   },
   "dependencies": {
     "object-maker": "^1.2.0",
-    "redux-peach": "^4.1.0"
+    "redux-peach": "^4.1.1"
   },
   "devDependencies": {
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2",
-    "redux": "^4.0.1",
     "@babel/core": "^7.1.6",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
@@ -90,6 +85,9 @@
     "pre-commit": "^1.2.2",
     "prettier-eslint-cli": "^4.7.1",
     "prettier-tslint": "^0.4.0",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "style-loader": "^0.23.1",
     "ts-jest": "^23.10.4",
@@ -104,7 +102,7 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.3.1"
   },
   "keywords": [
     "react",
